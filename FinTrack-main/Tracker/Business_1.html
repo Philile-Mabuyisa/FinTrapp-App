@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Business | Cash Flow Sheet</title>
+        <link rel="stylesheet" type="text/css" href=" /global_styles.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <header>
+      <div class="navbar">
+        <a href="/Home/index.html" class="w3-button w3-round w3-theme-d3 w3-border " target>HOME</a>
+        <a href="/About/About.html" class="w3-button w3-round w3-theme-d3 w3-border " target>ABOUT</a> 
+        <div class="dropdown">
+          <a href="#" class="dropbtn">LOGIN</a>
+          <div class="dropdown-content">
+            <a href="/Login/signup.html" class="w3-button w3-round w3-theme-d3 w3-border " target>SIGN UP</a>
+            <a href="/Login/login.html" class="w3-button w3-round w3-theme-d3 w3-border " target>LOGIN</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">TRACKER</a>
+          <div class="dropdown-content">
+            <a href="/Tracker/Personal_1.html" class="w3-button w3-round w3-theme-d3 w3-border " target>PERSONAL </a>
+            <a href="/Tracker/Business_1.html" class="w3-button w3-round w3-theme-d3 w3-border " target>BUSINESS </a>
+            <a href="/Tracker/testgrounds.html" class="w3-button w3-round w3-theme-d3 w3-border " target>OPTIONAL </a>
+            
+          </div>
+        </div>
+        <a href="/Contact Us/contact.html" class="w3-button w3-round w3-theme-d3 w3-border " target>CONTACT US</a>
+      </div>
+    </header>
+    <body>
+        
+        <table class="styled">
+            <!--Income-->
+            <tr><th>Item</th><th>Month 1</th><th>Month 2</th><th>Month 3</th><th>Total</th><th>Section</th><th>Comments</th></tr>
+            <tr><th>Gross Income</th><th><p>R <span id="GrInc1"></span></p></th><th><p>R <span id="GrInc2"></span></p></th><th><p>R <span id="GrInc3"></span></p></th><th><p>R <span id="GrInc4"></span></p></th> <td>A</td><td>Total Income</td></tr>
+            <tr><td>Cash Balance</td><td>R <input oninput="calculateNet()" type="text" id="CshB1" name="CshB1"></td><td><p>R <span id="CshB2"></span></p></td><td><p>R <span id="CshB3"></span></p></td> <td><p>R <span id="CshB4"></span></p></td> </tr>
+            <tr><td>Monthly Sales</td><td>R <input oninput="calculateNet()" type="text" id="Sales1" name="Sales1"></td><td>R <input oninput="calculateNet()" type="text" id="Sales2" name="Sales2"></td><td>R <input oninput="calculateNet()" type="text" id="Sales3" name="Sales3"></td> <td><p>R <span id="Sales4"></span></p></td> </tr>
+            <tr><td>Investments</td><td>R <input oninput="calculateNet()" type="text" id="Inv1" name="Inv1"></td><td>R <input oninput="calculateNet()" type="text" id="Inv2" name="Inv2"></td><td>R <input oninput="calculateNet()" type="text" id="Inv3" name="Inv3"></td> <td><p>R <span id="Inv4"></span></p></td> </tr>
+            <tr><td>Loan</td><td>R <input oninput="calculateNet()" type="text" id="LnIn1" name="LnIn1"></td><td>R <input oninput="calculateNet()" type="text" id="LnIn2" name="LnIn2"></td><td>R <input oninput="calculateNet()" type="text" id="LnIn3" name="LnIn3"></td> <td><p>R <span id="LnIn4"></span></p></td> </tr>
+            <!--Expense-->      
+            <tr><th>Expenses</th><th><p>R <span id="Expense1"></span></p></th> <th><p>R <span id="Expense2"></span></p></th> <th><p>R <span id="Expense3"></span></p></th><th><p>R <span id="Expense4"></span></p></th><td>B</td><td>Total Expenses</td></tr>
+            <tr><td>Groceries</td><td>R <input oninput="calculateNet()" type="text" id="Groc1" name="Groc1"></td> <td>R <input oninput="calculateNet()" type="text" id="Groc2" name="Groc2"></td><td>R <input oninput="calculateNet()" type="text" id="Groc3" name="Groc3"></td> <td><p>R <span id="Groc4"></span></p></td> </tr>
+            <tr><td>Bills</td><td>R <input oninput="calculateNet()" type="text" id="Bills1" name="Bills1"></td> <td>R <input oninput="calculateNet()" type="text" id="Bills2" name="Bills2"></td><td>R <input oninput="calculateNet()" type="text" id="Bills3" name="Bills3"></td> <td><p>R <span id="Bills4"></span></p></td> </tr>
+            <tr><td>Electricity</td><td>R <input oninput="calculateNet()" type="text" id="Elec1" name="Elec1"></td> <td>R <input oninput="calculateNet()" type="text" id="Elec2" name="Elec2"></td><td>R <input oninput="calculateNet()" type="text" id="Elec3" name="Elec3"></td> <td><p>R <span id="Elec4"></span></p></td> </tr>
+            <tr><td>Salaries</td><td>R <input oninput="calculateNet()" type="text" id="Sala1" name="Sala1"></td> <td>R <input oninput="calculateNet()" type="text" id="Sala2" name="Sala2"></td><td>R <input oninput="calculateNet()" type="text" id="Sala3" name="Sala3"></td> <td><p>R <span id="Sala4"></span></p></td> </tr>
+            <tr><td>Fuel/transportation</td><td>R <input oninput="calculateNet()" type="text" id="Fuel1" name="Fuel1"></td> <td>R <input oninput="calculateNet()" type="text" id="Fuel2" name="Fuel2"></td><td>R <input oninput="calculateNet()" type="text" id="Fuel3" name="Fuel3"></td> <td><p>R <span id="Fuel4"></span></p></td> </tr>
+            <tr><td>Outings</td><td>R <input oninput="calculateNet()" type="text" id="Out1" name="Out1"></td> <td>R <input oninput="calculateNet()" type="text" id="Out2" name="Out2"></td><td>R <input oninput="calculateNet()" type="text" id="Out3" name="Out3"></td> <td><p>R <span id="Out4"></span></p></td> </tr>
+            <tr><td>Insurance</td><td>R <input oninput="calculateNet()" type="text" id="Insure1" name="Insure1"></td> <td>R <input oninput="calculateNet()" type="text" id="Insure2" name="Insure2"></td><td>R <input oninput="calculateNet()" type="text" id="Insure3" name="Insure3"></td> <td><p>R <span id="Insure4"></span></p></td> </tr>
+            <tr><td>Phone bill</td><td>R <input oninput="calculateNet()" type="text" id="Phone1" name="Phone1"></td> <td>R <input oninput="calculateNet()" type="text" id="Phone2" name="Phone2"></td><td>R <input oninput="calculateNet()" type="text" id="Phone3" name="Phone3"></td> <td><p>R <span id="Phone4"></span></p></td> </tr>
+            <tr><td>Internet</td><td>R <input oninput="calculateNet()" type="text" id="Inter1" name="Inter1"></td> <td>R <input oninput="calculateNet()" type="text" id="Inter2" name="Inter2"></td><td>R <input oninput="calculateNet()" type="text" id="Inter3" name="Inter3"></td> <td><p>R <span id="Inter4"></span></p></td> </tr>
+          <!--Net-->
+            <tr><th>Income (before tax)</th><th><p>R <span id="IncBTax1"></span></p></th> <th><p>R <span id="IncBTax2"></span></p></th><th><p>R <span id="IncBTax3"></span></p></td><td><p>R <span id="IncBTax4"></span></p></td><td>C</td><td>A-B</td></tr>
+            <tr><td>Monthly Tax</td><td>R <input oninput="calculateNet()" type="text" id="Tax1" name="Tax1"></td> <td>R <input oninput="calculateNet()" type="text" id="Tax2" name="Tax2"></td><td>R <input oninput="calculateNet()" type="text" id="Tax3" name="Tax3"></td> <td><p>R <span id="Tax4"></span></p></td> <td>D</td></tr>
+            <tr><th>Income (after tax)</th><th><p>R <span id="IncATax1"></span></p></th> <th><p>R <span id="IncATax2"></span></p></th><th><p>R <span id="IncATax3"></span></p></td><td><p>R <span id="IncATax4"></span></p></td><td>E</td><td>C-D</td></tr>
+            <tr><td>Loan</td><td>R <input oninput="calculateNet()" type="text" id="LnOut1" name="LnOut1"></td> <td>R <input oninput="calculateNet()" type="text" id="LnOut2" name="LnOut2"></td><td>R <input oninput="calculateNet()" type="text" id="LnOut3" name="LnOut3"></td> <td><p>R <span id="LnOut4"></span></p></td> <td>F</td></tr>
+            <tr><th>Net Income (Expense)</th><th><p>R <span id="Net1"></span></p></th> <th><p>R <span id="Net2"></span></p></th><th><p>R <span id="Net3"></span></p></td><td><p>R <span id="Net4"></span></p></td><td>G</td><td>E-F</td></tr>
+            <tr><td><button type="button" onclick="calculateNet()" id="button_calc">Calculate</button></td></tr>
+        <script>
+            function calculateNet() {
+
+              
+
+              //col 1  
+              //Cash Bal
+              var CshB1 = document.getElementById("CshB1").value || "0";
+              
+              //Income
+              var Sales1 = document.getElementById("Sales1").value || "0";
+              var Inv1 = document.getElementById("Inv1").value || "0";
+              var LnIn1 = document.getElementById("LnIn1").value || "0";
+              var GrInc1 = parseFloat(CshB1) + parseFloat(Sales1) + parseFloat(Inv1) + parseFloat(LnIn1);
+              document.getElementById("GrInc1").innerHTML = GrInc1;
+           
+              //Expense
+              var Groc1 = document.getElementById("Groc1").value || "0";
+              var Bills1 = document.getElementById("Bills1").value || "0";
+              var Elec1 = document.getElementById("Elec1").value || "0";
+              var Sala1 = document.getElementById("Sala1").value || "0";
+              var Fuel1 = document.getElementById("Fuel1").value || "0";
+              var Out1 = document.getElementById("Out1").value || "0";
+              var Insure1 = document.getElementById("Insure1").value || "0";
+              var Phone1 = document.getElementById("Phone1").value || "0";
+              var Inter1 = document.getElementById("Inter1").value || "0";              
+              var Expense1 = parseFloat(Groc1) + parseFloat(Bills1) + parseFloat(Elec1) + parseFloat(Sala1) + parseFloat(Fuel1) + parseFloat(Out1) + parseFloat(Insure1) + parseFloat(Phone1) + parseFloat(Inter1);
+              document.getElementById("Expense1").innerHTML = Expense1;
+              
+              //Net
+              var IncBTax1 = parseFloat(GrInc1) - parseFloat(Expense1);
+              document.getElementById("IncBTax1").innerHTML = IncBTax1;              
+              var Tax1 = document.getElementById("Tax1").value || "0";
+              var IncATax1 = parseFloat(IncBTax1) - parseFloat(Tax1);
+              document.getElementById("IncATax1").innerHTML = IncATax1;
+              var LnOut1 = document.getElementById("LnOut1").value || "0";
+              var Net1 = parseFloat(IncATax1) - parseFloat(LnOut1);
+              document.getElementById("Net1").innerHTML = Net1;    
+              
+                     
+              //Col 2
+              //Cash Bal
+              var CshB2 = parseFloat(Net1);
+              document.getElementById("CshB2").innerHTML = CshB2;
+             
+              //Income
+              var Sales2 = document.getElementById("Sales2").value || "0";
+              var Inv2 = document.getElementById("Inv2").value || "0";
+              var LnIn2 = document.getElementById("LnIn2").value || "0";
+              var GrInc2 = parseFloat(CshB2) + parseFloat(Sales2) + parseFloat(Inv2) + parseFloat(LnIn2);
+              document.getElementById("GrInc2").innerHTML = GrInc2;
+              
+              //Expense
+              var Groc2 = document.getElementById("Groc2").value || "0";
+              var Bills2 = document.getElementById("Bills2").value || "0";
+              var Elec2 = document.getElementById("Elec2").value || "0";
+              var Sala2 = document.getElementById("Sala2").value || "0";
+              var Fuel2 = document.getElementById("Fuel2").value || "0";
+              var Out2 = document.getElementById("Out2").value || "0";
+              var Insure2 = document.getElementById("Insure2").value || "0";
+              var Phone2 = document.getElementById("Phone2").value || "0";
+              var Inter2 = document.getElementById("Inter2").value || "0";
+              var Expense2 = parseFloat(Groc2) + parseFloat(Bills2) + parseFloat(Elec2) + parseFloat(Sala2) + parseFloat(Fuel2) + parseFloat(Out2) + parseFloat(Insure2) + parseFloat(Phone2) + parseFloat(Inter2);
+              document.getElementById("Expense2").innerHTML = Expense2;
+              
+              //Net
+              var IncBTax2 = parseFloat(GrInc2) - parseFloat(Expense2);
+              document.getElementById("IncBTax2").innerHTML = IncBTax2;
+              var Tax2 = document.getElementById("Tax2").value || "0";
+              var IncATax2 = parseFloat(IncBTax2) - parseFloat(Tax2);
+              document.getElementById("IncATax2").innerHTML = IncATax2;
+              var LnOut2 = document.getElementById("LnOut2").value || "0";
+              var Net2 = parseFloat(IncATax2) - parseFloat(LnOut2);
+              document.getElementById("Net2").innerHTML = Net2;    
+              
+              
+              
+              //Col 3
+
+              //Cash Bal
+              var CshB3 = parseFloat(Net2);
+              document.getElementById("CshB3").innerHTML = CshB3;
+
+              //Income
+              var Sales3 = document.getElementById("Sales3").value || "0";
+              var Inv3 = document.getElementById("Inv3").value || "0";
+              var LnIn3 = document.getElementById("LnIn3").value || "0";
+
+              var GrInc3 = parseFloat(CshB3) + parseFloat(Sales3) + parseFloat(Inv3) + parseFloat(LnIn3);
+              document.getElementById("GrInc3").innerHTML = GrInc3; 
+ 
+              //Expense
+              var Groc3 = document.getElementById("Groc3").value || "0";              
+              var Bills3 = document.getElementById("Bills3").value || "0";
+              var Elec3 = document.getElementById("Elec3").value || "0";
+              var Sala3 = document.getElementById("Sala3").value || "0";
+              var Fuel3 = document.getElementById("Fuel3").value || "0";
+              var Out3 = document.getElementById("Out3").value || "0";
+              var Insure3 = document.getElementById("Insure3").value || "0";
+              var Phone3 = document.getElementById("Phone3").value || "0";
+              var Inter3 = document.getElementById("Inter3").value || "0";              
+              
+              var Expense3 = parseFloat(Groc3) + parseFloat(Bills3) + parseFloat(Elec3) + parseFloat(Sala3) + parseFloat(Fuel3) + parseFloat(Out3) + parseFloat(Insure3) + parseFloat(Phone3) + parseFloat(Inter3);
+              document.getElementById("Expense3").innerHTML = Expense3;
+           
+              //Net
+              var IncBTax3 = parseFloat(GrInc3) - parseFloat(Expense3);
+              document.getElementById("IncBTax3").innerHTML = IncBTax3;              
+              var Tax3 = document.getElementById("Tax3").value || "0";
+              var IncATax3 = parseFloat(IncBTax3) - parseFloat(Tax3);
+              document.getElementById("IncATax3").innerHTML = IncATax3;              
+              var LnOut3 = document.getElementById("LnOut3").value || "0" ;
+              var Net3 = parseFloat(IncATax3) - parseFloat(LnOut3);
+              document.getElementById("Net3").innerHTML = Net3;    
+              
+              
+
+
+              //Col 4
+
+              //Cash Bal
+              var CshB4 = parseFloat(CshB1);
+              document.getElementById("CshB4").innerHTML = CshB4;
+
+              //Income
+              var Sales4 = parseFloat(Sales1) + parseFloat(Sales2) + parseFloat(Sales3);
+              document.getElementById("Sales4").innerHTML = Sales4;
+              var Inv4 = parseFloat(Inv1) + parseFloat(Inv2) + parseFloat(Inv3);
+              document.getElementById("Inv4").innerHTML = Inv4;
+              var LnIn4 = parseFloat(LnIn1) + parseFloat(LnIn2) + parseFloat(LnIn3);
+              document.getElementById("LnIn4").innerHTML = LnIn4;
+
+              var GrInc4 = parseFloat(CshB4) + parseFloat(Sales4) + parseFloat(Inv4) + parseFloat(LnIn4);
+              document.getElementById("GrInc4").innerHTML = GrInc4;
+              
+              //Expense
+              var Groc4 = parseFloat(Groc1) + parseFloat(Groc2) + parseFloat(Groc3);
+              document.getElementById("Groc4").innerHTML = Groc4;
+              var Bills4 = parseFloat(Bills1) + parseFloat(Bills2) + parseFloat(Bills3);
+              document.getElementById("Bills4").innerHTML = Bills4;
+              var Elec4 = parseFloat(Elec1) + parseFloat(Elec2) + parseFloat(Elec3);
+              document.getElementById("Elec4").innerHTML = Elec4;
+              var Sala4 = parseFloat(Sala1) + parseFloat(Sala2) + parseFloat(Sala3);
+              document.getElementById("Sala4").innerHTML = Sala4;
+              var Fuel4 = parseFloat(Fuel1) + parseFloat(Fuel2) + parseFloat(Fuel3);
+              document.getElementById("Fuel4").innerHTML = Fuel4;
+              var Out4 = parseFloat(Out1) + parseFloat(Out2) + parseFloat(Out3);
+              document.getElementById("Out4").innerHTML = Out4;
+              var Insure4 = parseFloat(Insure1) + parseFloat(Insure2) + parseFloat(Insure3);
+              document.getElementById("Insure4").innerHTML = Insure4;
+              var Phone4 = parseFloat(Phone1) + parseFloat(Phone2) + parseFloat(Phone3);
+              document.getElementById("Phone4").innerHTML = Phone4;
+              var Inter4 = parseFloat(Inter1) + parseFloat(Inter2) + parseFloat(Inter3);
+              document.getElementById("Inter4").innerHTML = Inter4;
+
+              var Expense4 = parseFloat(Groc4) + parseFloat(Bills4) + parseFloat(Elec4) + parseFloat(Sala4) + parseFloat(Fuel4) + parseFloat(Out4) + parseFloat(Insure4) + parseFloat(Phone4) + parseFloat(Inter4);
+              document.getElementById("Expense4").innerHTML = Expense4;
+
+              //Net
+              var IncBTax4 = parseFloat(GrInc4) - parseFloat(Expense4);
+              document.getElementById("IncBTax4").innerHTML = IncBTax4; 
+              var Tax4 = parseFloat(Tax1) + parseFloat(Tax2) + parseFloat(Tax3);
+              document.getElementById("Tax4").innerHTML = Tax4;
+              var IncATax4 = parseFloat(IncBTax4) - parseFloat(Tax4);
+              document.getElementById("IncATax4").innerHTML = IncATax4; 
+              var LnOut4 = parseFloat(LnOut1) + parseFloat(LnOut2) + parseFloat(LnOut3);
+              document.getElementById("LnOut4").innerHTML = LnOut4;
+              var Net4 = parseFloat(IncATax4) - parseFloat(LnOut4);
+              document.getElementById("Net4").innerHTML = Net4;
+
+            }
+        </script>
+       
+    </table> 
+</body>
+</html>

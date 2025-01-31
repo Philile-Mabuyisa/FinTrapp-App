@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal | Cash Flow Sheet</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="/global_styles.css">
+  <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+  <script src="/Tracker/track_sript.js"></script>
+</head>
+<header>
+ 
+  
+</header>
+<body>
+  <div class="navbar">
+    <a href="/Home/index.html" class="w3-button w3-round w3-theme-d3 w3-border " target>HOME</a>
+    <a href="/About/About.html" class="w3-button w3-round w3-theme-d3 w3-border " target>ABOUT</a> 
+    <div class="dropdown">
+      <a href="#" class="dropbtn">LOGIN</a>
+      <div class="dropdown-content">
+        <a href="/Login/signup.html" class="w3-button w3-round w3-theme-d3 w3-border " target>SIGN UP</a>
+        <a href="/Login/login.html" class="w3-button w3-round w3-theme-d3 w3-border " target>LOGIN</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#" class="dropbtn">TRACKER</a>
+      <div class="dropdown-content">
+        <a href="/Tracker/Personal_1.html" class="w3-button w3-round w3-theme-d3 w3-border " target>PERSONAL </a>
+        <a href="/Tracker/Business_1.html" class="w3-button w3-round w3-theme-d3 w3-border " target>BUSINESS </a>
+        <a href="/Tracker/testgrounds.html" class="w3-button w3-round w3-theme-d3 w3-border " target>OPTIONAL </a>
+        
+      </div>
+    </div>
+    <a href="/Contact Us/contact.html" class="w3-button w3-round w3-theme-d3 w3-border " target>CONTACT US</a>
+  </div>
+  
+  <table class="styled">
+      <tr><th>Item</th><th>Amount</th><th>Section</th><th>Comments</th></tr>
+      <hr>
+      <tr><th>Gross Income</th><th><p>R <span id="grIn"></span></p></th><td>A</td><td>Total Income</td></tr>
+      <tr><td>Monthly Salary</td><td>R <input oninput="calculateNet(0)" type="number" id="sal" name="Salary" ></td></tr>
+      <tr><td>Other income</td><td>R <input oninput="calculateNet(1)" type="number" id="othIn" name="OthInc"></td></tr>    
+      <tr><th>Expenses</th><th><p>R <span id="expen"></span></p></th><td>B</td><td>Total Expenses</td></tr>
+      <tr><td>Groceries</td><td>R <input oninput="calculateNet(3)" type="number" id="groc" name="Groc"></td></tr>
+      <tr><td>Rates</td><td>R <input oninput="calculateNet(4)" type="number" id="rates" name="Rates"></td></tr>
+      <tr><td>Electricity</td><td>R <input oninput="calculateNet(5)" type="number" id="elec" name="Elec"></td></tr>
+      <tr><td>Subsciptions</td><td>R <input oninput="calculateNet(6)" type="number" id="sub" name="Sub"></td></tr>
+      <tr><td>Fuel/transportation</td><td>R <input oninput="calculateNet(7)" type="number" id="fuel" name="Fuel"></td></tr>
+      <tr><td>Outings</td><td>R <input oninput="calculateNet(8)" type="number" id="out" name="Out"></td></tr>
+      <tr><td>Insurance</td><td>R <input oninput="calculateNet(9)" type="number" id="insure" name="Insure"></td></tr>
+      <tr><td>Phone bill</td><td>R <input oninput="calculateNet(10)" type="number" id="phone" name="Phone"></td></tr>
+      <tr><th>Income (before tax)</th><td><p>R <span id="inBTax"></span></p></td><td>C</td><td>A-B</td></tr>
+      <tr><td>Monthly Tax</td><td><span id="tax" name="Tax"> </span></td><td>D</td></tr>
+      <tr><th>Income (after tax)</th><td><p>R <span id="inATax"></span></p></td><td>E</td><td>C-D</td></tr>
+      <tr><td>Loan</td><td>R <input oninput="calculateNet(14)" type="number" id="loan" name="Loan"></td><td>F</td></tr>
+      <tr><th>Net Income (Expense)</th><td><p>R <span id="net"></span></p></td><td>G</td><td>E-F</td></tr>
+    </table>
+  
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Optional Financial Tracker</title>
+      <link rel="stylesheet" type="text/css" href=" /Tracker/styles.css">
+      <link rel="stylesheet" type="text/css" href=" /global_styles.css">
+      <link rel="icon" type="image/x-icon" href=" /Images/favicon.ico">
+      <link rel="script" type="text/js" href=" /Tracker/track_sript.js">
+      <script src=" /Tracker/track_sript.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/Home/index.html" class="w3-button w3-round w3-theme-d3 w3-border " target>HOME</a>
+      <a href="/About/About.html" class="w3-button w3-round w3-theme-d3 w3-border " target>ABOUT</a> 
+      <div class="dropdown">
+        <a href="#" class="dropbtn">LOGIN</a>
+        <div class="dropdown-content">
+          <a href="/Login/signup.html" class="w3-button w3-round w3-theme-d3 w3-border " target>SIGN UP</a>
+          <a href="/Login/login.html" class="w3-button w3-round w3-theme-d3 w3-border " target>LOGIN</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">TRACKER</a>
+        <div class="dropdown-content">
+          <a href="/Tracker/Personal_1.html" class="w3-button w3-round w3-theme-d3 w3-border " target>PERSONAL </a>
+          <a href="/Tracker/Business_1.html" class="w3-button w3-round w3-theme-d3 w3-border " target>BUSINESS </a>
+          <a href="/Tracker/testgrounds.html" class="w3-button w3-round w3-theme-d3 w3-border " target>OPTIONAL </a>
+          
+        </div>
+      </div>
+      <a href="/Contact Us/contact.html" class="w3-button w3-round w3-theme-d3 w3-border " target>CONTACT US</a>
+    </div>
+    
+    <div class="holder">
+    
+      <div class="boxes">
+        <div class="lids">
+          <input type="checkbox" id="salChBx" name="mySal" value="0" onchange="onCheckboxChange(2)">
+          <label for="mySal">Salary</label>
+        </div>
+        <div class="lids">
+          <input type="checkbox" id="othInChBx" name="myOthIn" value="0" onchange="onCheckboxChange(3)">
+          <label for="myOthIn">Other Income</label>
+        </div>
+        <div class="lids">
+          <input type="checkbox" id="grocChBx" name="myGroc" value="0" onchange="onCheckboxChange(5)">
+          <label for="myGroc">Groceries</label>
+        </div>
+        <div class="lids">
+          <input type="checkbox" id="ratesChBx" name="myRates" value="0" onchange="onCheckboxChange(6)">
+          <label for="myRates">Rates</label>
+        </div>
+        <div class="lids">
+          <input type="checkbox" id="elecChBx" name="myElec" value="0" onchange="onCheckboxChange(7)">
+          <label for="myElec">Electricity</label>
+        </div>
+        <div class="lids">
+          <input type="checkbox" id="subChBx" name="mySub" value="0" onchange="onCheckboxChange(8)">
+          <label for="mySub">Subsciptions</label>
+        </div>
+        <div class="lids">
+          <input type="checkbox" id="fuelChBx" name="myFuel" value="0" onchange="onCheckboxChange(9)">
+          <label for="myFuel">Fuel/transportation</label>
+        </div>
+        <div class="lids">
+          <input type="checkbox" id="outChBx" name="myOut" value="0" onchange="onCheckboxChange(10)">
+          <label for="myOut">Outings</label>
+        </div>
+        <div class="lids">
+          <input type="checkbox" id="insureChBx" name="myInsure" value="0" onchange="onCheckboxChange(11)">
+          <label for="myInsure">Insurance</label>
+        </div>
+        <div class="lids">
+          <input type="checkbox" id="phoneChBx" name="myPhone" value="0" onchange="onCheckboxChange(12)">
+          <label for="myPhone">Phone bill</label>
+        </div>
+        <div class="lids">
+          <input checked type="checkbox" id="taxChBx" name="myTax" value="0" onchange="onCheckboxChange(14)" >
+          <label for="myTax">Tax</label>
+        </div>
+        <div class="lids">
+          <input type="checkbox" id="loanChBx" name="myLoan" value="0" onchange="onCheckboxChange(16)">
+          <label for="myLoan">Loan</label>
+        </div>
+      </div>
+    
+      <div class="chairs">
+        <table id="cashFlowSheet" class= "styled">
+            <tr id = "0" ><th>Item</th><th>Amount</th><th>Section</th><th>Comments</th></tr> <!-- Row 1 | index 0 | Main Heading -->
+            <tr id = "1" ><th>Gross Income</th><th><p>R <span id="grIn"></span></p></th><td>A</td><td>Total Income</td></tr> <!-- Row 2 | index 1 | Gross Income -->
+            <tr id = "2" ><td><span> </span></td></tr><!-- Row 3 | index 2 | Salary -->
+            <tr id = "3" ><td><span> </span></td></tr><!-- Row 4 | index 3 | Other Income -->
+            <tr id = "4" ><th>Expenses</th><th><p>R <span id="expen"></span></p></th><td>B</td><td>Total Expenses</td></tr>
+            <tr id = "5" ><td><span> </span></td></tr><!-- Row 6 | index 5 | Exp 1 -->
+            <tr id = "6" ><td><span> </span></td></tr><!-- Row 7 | index 6 | Exp 1 -->
+            <tr id = "7" ><td><span> </span></td></tr><!-- Row 8 | index 7 | Exp 1 -->
+            <tr id = "8" ><td><span> </span></td></tr><!-- Row 9 | index 8 | Exp 1 -->
+            <tr id = "9" ><td><span> </span></td></tr><!-- Row 10 | index 9  | Exp 1 -->
+            <tr id = "10"><td><span> </span></td></tr><!-- Row 11 | index 10 | Exp 1 -->
+            <tr id = "11"><td><span> </span></td></tr><!-- Row 12 | index 11 | Exp 1 -->
+            <tr id = "12"><td><span> </span></td></tr><!-- Row 13 | index 12 | Exp 1 -->
+            <tr id = "13"><th>Income (before tax)</th><td><p>R <span id="inBTax"></span></p></td><td>C</td><td>A-B</td></tr><!-- Row 14 | index 13 | Income Bf Tax -->
+            <tr id = "14"><th>Tax</th><td><p>R <span id="tax"></span></p></td><td>D</td></tr><!-- Row 15 | index 14 | Tax 1 -->
+            <tr id = "15"><th>Income (after tax)</th><td><p><span id="inATax"></span></p></td><td>E</td><td>C-D</td></tr><!-- Row 16 | index 15 | Income Af Tax -->
+            <tr id = "16"><td><span> </span></td></tr><!-- Row 17 | index 16 | Loan -->
+            <tr id = "17"><th>Net Income (Expense)</th><td><p>R <span id="net"></span></p></td><td>G</td><td>E-F</td></tr><!-- Row 18 | index 17 | Net Income -->
+            
+        </table>
+      </div>
+    </div>
+  
+  </body>
+</html>

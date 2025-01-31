@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contact Us | FinTrack</title>
+      <link rel="stylesheet" href="contact.css">
+      <link rel="stylesheet" type="text/css" href=" /global_styles.css">
+      <link rel="icon" type="image/x-icon" href=" /Images/favicon.ico">
+  </head>
+  <header>
+ 
+    <div class="navbar">
+      <a href="/Home/index.html" class="w3-button w3-round w3-theme-d3 w3-border " target>HOME</a>
+      <a href="/About/About.html" class="w3-button w3-round w3-theme-d3 w3-border " target>ABOUT</a> 
+      <div class="dropdown">
+        <a href="#" class="dropbtn">LOGIN</a>
+        <div class="dropdown-content">
+          <a href="/Login/signup.html" class="w3-button w3-round w3-theme-d3 w3-border " target>SIGN UP</a>
+          <a href="/Login/login.html" class="w3-button w3-round w3-theme-d3 w3-border " target>LOGIN</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">TRACKER</a>
+        <div class="dropdown-content">
+          <a href="/Tracker/Personal_1.html" class="w3-button w3-round w3-theme-d3 w3-border " target>PERSONAL </a>
+          <a href="/Tracker/Business_1.html" class="w3-button w3-round w3-theme-d3 w3-border " target>BUSINESS </a>
+          <a href="/Tracker/testgrounds.html" class="w3-button w3-round w3-theme-d3 w3-border " target>OPTIONAL </a>
+          
+        </div>
+      </div>
+      <a href="/Contact Us/contact.html" class="w3-button w3-round w3-theme-d3 w3-border " target>CONTACT US</a>
+    </div>
+  </header>
+  <body>
+    <div class="container">
+        <div style="text-align:center">
+          <h1 style="color: white;">Contact Us</h1>
+          <h2 style="color: white;"><strong> We would love to help you manage your finances better, please contact us.</strong></h2>
+        </div>
+        <div class="row">
+          <div class="column"><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13241.206243333932!2d18.4606593!3d-33.9333712!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5db42c93a685%3A0xec815c21c6eaef71!2sCapaCiTi%20Tech%20Career%20Accelerator!5e0!3m2!1sen!2sza!4v1707220767150!5m2!1sen!2sza" width="600" height="470" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="column">
+            <form action="" id="emailForm">
+                <label for="name" style="font-weight: bold;">First Name</label>
+                <input name="name" id="name" type="text" placeholder="Your Name" required>
+
+                <label for="surname" style="font-weight: bold;">Last Name</label>
+                <input name="Surname" id="surname" type="text" placeholder="Your Surname" required>
+
+                <label for="email" style="font-weight: bold;">Email</label>
+                <input name="email" id="email" type="text" placeholder="yourname@example.com" required>
+
+              <label for="message" style="font-weight: bold;">Message</label>
+              <textarea id="message" name="subject" placeholder="Write something..." required style="height:170px"></textarea>
+
+              <label for="file" style="font-weight: bold;">Upload File</label>
+               <input type="file" id="file" name="file" accept=".txt,.pdf,.doc,.docx.,jpg,.png">
+              <button id="submit" type="submit" style="font-weight: bold;">Submit</button>      
+              
+              
+              
+            </form>
+          </div>
+        </div>
+      </div>
+      <script src="contact.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

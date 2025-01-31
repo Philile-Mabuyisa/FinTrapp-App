@@ -1,0 +1,40 @@
+    * {
+      box-sizing: border-box;
+  }
+  
+  input[type=text], select, textarea {
+      width: 100%;
+      padding: 20px;
+      border: 2px solid rgba(0, 0, 0, 0.473);
+      margin-top: 5px;
+      margin-bottom: 15px;
+      resize: vertical;
+  }
+  
+  .container {
+      border-radius: 5px;
+      background-color: #0F2C4E ;
+      padding: 40px;
+  }
+  
+  .column {
+      float: left;
+      width: 100%; /* For mobile, take up full width */
+      margin-top: 6px;
+      padding: 20px;
+  }
+  
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  
+  /* Media query for tablet/desktop */
+  @media screen and (min-width: 1300px) {
+      .column {
+          width: 50%; /* For desktop, make each column take up half of the container */
+      }
+
+  }
+  
